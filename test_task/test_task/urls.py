@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #api/users/ - registration
-    #api/jwt/create/ - authorization
+    # api/users/ - registration
+    # api/jwt/create/ - authorization
     path("api/", include("djoser.urls")),
     path("api/", include("djoser.urls.jwt")),
+    path("api/", include('task.urls')),
+
 ]
