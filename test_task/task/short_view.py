@@ -20,9 +20,6 @@ class ShortView(APIView):
         users_short_url_serialized = ShortSerializer(users_short_url,many=True).data
         return Response(users_short_url_serialized)
 
-
-
-
 def short():
     s = pyshorteners.Shortener()
     shor = beforeLink.get()
@@ -31,9 +28,6 @@ def short():
 
     Url.objects.create(long_url=shor, user_id=3, short_url=k)
     afterLink.insert(0, k)
-
-
-
 
 root = Tk()
 root.title('Сократитель ссылок')

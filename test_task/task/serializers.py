@@ -11,5 +11,5 @@ class UserCreateCustomSerializer(UserCreateSerializer):
 
 class ShortSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ("long_url", "short_url", "user_id")
         model = Url
+        fields = ("long_url", "short_url", "user_id")
